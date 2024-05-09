@@ -19,6 +19,15 @@ class SecondMainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var edNilaiUAS: EditText
     private lateinit var btnCalculate: Button
     private lateinit var tvResult: TextView
+    private fun getGrade(nilaiAkhir: Double): String {
+        return when {
+            nilaiAkhir >= 90 -> "A"
+            nilaiAkhir >= 80 -> "B"
+            nilaiAkhir >= 70 -> "C"
+            nilaiAkhir >= 60 -> "D"
+            else -> "E"
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_main)
@@ -53,7 +62,8 @@ class SecondMainActivity : AppCompatActivity(), View.OnClickListener {
             val inputNilaiUAS = edNilaiUAS.text.toString().trim().toDouble()
             val totalNilai = inputNilaiTugas1 + inputNilaiTugas2 + inputNilaiTugas3 + inputNilaiUTS + inputNilaiUAS
             val nilaiAkhir = totalNilai / 5
-            tvResult.text = nilaiAkhir.toString()
+            val grade = getGrade(nilaiAkhir)
+            tvResult.text = "Nilai Akhir Anda Adalah: $nilaiAkhir, yang merupakan nilai $grade."
         }
     }
 }
