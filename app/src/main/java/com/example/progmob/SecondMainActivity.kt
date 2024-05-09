@@ -23,12 +23,17 @@ class SecondMainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_main)
 
-        val tvDataReceived = findViewById<TextView>(R.id.tv_datareceived)
+        val tvNama = findViewById<TextView>(R.id.tv_nama)
+        val tvNIM = findViewById<TextView>(R.id.tv_nim)
+        val tvMatkul = findViewById<TextView>(R.id.tv_matakuliah)
+
         val edNama = intent.getStringExtra("Nama")
         val edNIM = intent.getStringExtra("NIM")
         val edMatkul = intent.getStringExtra("Mata Kuliah")
 
-        tvDataReceived.text = "Nama: $edNama\nNIM: $edNIM\nMata Kuliah: $edMatkul"
+        tvNama.text = "Nama: $edNama"
+        tvNIM.text = "NIM: $edNIM"
+        tvMatkul.text = "Mata Kuliah: $edMatkul"
 
         edNilaiTugas1 = findViewById(R.id.ed_nilaitugas1)
         edNilaiTugas2 = findViewById(R.id.ed_nilaitugas2)

@@ -9,10 +9,28 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_datareceived"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_nama"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data Diterima"
+        android:layout_margin="15dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/tv_nim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/tv_matakuliah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         />
     <EditText
         android:id="@+id/ed_nilaitugas1"
@@ -55,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:textSize="24sp"
         android:textStyle="bold"
         android:text="Nilai AKhir Anda Adalah"

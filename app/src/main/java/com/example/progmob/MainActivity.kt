@@ -37,10 +37,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnMenu.setOnClickListener{
-            val phoneNumber = "08111"
-            val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
+            val url = "https://imissu.unud.ac.id/ServiceLoginAuth"
+            val openWebIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
 
-            startActivity(dialPhoneIntent)
+            startActivity(openWebIntent)
 
         }
     }
